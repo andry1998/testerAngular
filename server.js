@@ -3,6 +3,6 @@ const path = require('path');
 const app = express();
 app.use(express.static(__dirname + 'dist/tester-angular'));
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname + 'dist/tester-angular/index.html'));
+  res.send("hello world");
 })
 app.listen(process.env.PORT || 8080);
